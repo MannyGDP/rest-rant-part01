@@ -11,6 +11,9 @@ function Home() {
                 </a>
                 <div>
                     <img src="/images/flag_photo.jpg" alt="Flag" />
+                    <div>
+                        Photo by <a href="AUTHOR_LINK">Manny Delgado JK</a> on <a href="UNSPLASH_LINK">Unsplash</a>
+                    </div>
                 </div>
             </main>
         </Def>
