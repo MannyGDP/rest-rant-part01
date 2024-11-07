@@ -2,7 +2,7 @@ const placesRouter = require('express').Router();
 const places = require('../models/places');
 
 placesRouter.get('/', (req, res) => {
-    res.render('places/Index', { places });
+    res.render('places/Index', { places })
 });
 
 placesRouter.get('/new', (req, res) => {
@@ -14,7 +14,7 @@ placesRouter.get('/:id', (req, res) => {
   if (isNaN(id)) {
     res.render('Error404');
   } else {
-    res.render('Show');
+    res.render('Show', { place: places[id]});
   }
 });
 

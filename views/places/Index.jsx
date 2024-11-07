@@ -9,12 +9,9 @@ function Index({ places }) {
         <div className='row'>
         { places.map((place, index) => (
           <div className='col-sm-6'>
-                <a href="/">
-                <button className='btn-primary'>Back to Home</button>
-                </a>
                 <h2>
                   <a href={ '/places/${index}'}>
-                  { place.name }
+                    { place.name }
                   </a>
                  </h2>
                 <img src={ place.pic } alt={ place.name } />
