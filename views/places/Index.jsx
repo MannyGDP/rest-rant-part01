@@ -7,12 +7,16 @@ function Index({ places }) {
     <main>
         <h1>PLACES</h1>
         <div className='row'>
-        { places.map(place => (
+        { places.map((place, index) => (
           <div className='col-sm-6'>
                 <a href="/">
                 <button className='btn-primary'>Back to Home</button>
                 </a>
-                <h2>{ place.name }</h2>
+                <h2>
+                  <a href={ '/places/${index}'}>
+                  { place.name }
+                  </a>
+                 </h2>
                 <img src={ place.pic } alt={ place.name } />
                 <p className='text-center'>{ place.cuisines }</p>
                 <p className='text-center'>

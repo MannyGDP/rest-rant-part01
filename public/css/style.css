@@ -1,5 +1,41 @@
+body {
+  background-color: lightblue;
+  text-align: center;
+}
+
+main {
+  margin-right: 20px;
+  margin-left: 20px;
+  background-color: wheat;
+}
+
 h1 {
     text-align: center;
     color: rgb(245, 121, 6);
   }
-  
+
+  nav {
+    background-color: cornflowerblue;
+    padding: 10px;
+  }
+
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+  }
+
+  nav li {
+    display: inline;
+    margin-right: 25px;
+  }
+
+  nav a {
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.5em;
+  }
+
+  nav a:hover {
+    color: pink;
+    text-decoration: none;
+  }
