@@ -1,14 +1,16 @@
 const express = require('express');
 require('dotenv').config();
+const methodOverride = require('method-override');
 
 const { PORT } = process.env;
 const app = express();
 
 app.set('view engine', 'jsx');
-app.set('views', __dirname + '/views');
 app.engine('jsx', require('express-react-views').createEngine());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
+app.use(methodOverride('_method'));
+// app.set('views', __dirname + '/views');
 
 app.use('/places', require('./controllers/places'));
 

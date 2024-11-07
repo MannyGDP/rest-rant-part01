@@ -13,8 +13,23 @@ placesRouter.get('/:id', (req, res) => {
   let id = Number(req.params.id);
   if (isNaN(id)) {
     res.render('Error404');
+  } else if (!places[id]) {
+    res.render('Error404');
+  }
+  else {
+    res.render('Show', { place: places[id], id });
+  }
+});
+
+placesRouter.delete('/:id', (req, res) => {
+  let id = Number(req.params.id);
+  if (isNaN(id)) {
+    res.render('Error404');
+  } else if (!places[id]) {
+    res.render('Error404');
   } else {
-    res.render('Show', { place: places[id]});
+    places.splice(id, 1);
+    res.redirect('places');
   }
 });
 
