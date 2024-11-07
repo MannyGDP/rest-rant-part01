@@ -10,14 +10,14 @@ function Index({ places }) {
         { places.map((place, index) => (
           <div className='col-sm-6'>
                 <h2>
-                  <a href={ '/places/${index}'}>
+                  <a href={ `/places/${index}`}>
                     { place.name }
                   </a>
                  </h2>
                 <img src={ place.pic } alt={ place.name } />
                 <p className='text-center'>{ place.cuisines }</p>
                 <p className='text-center'>
-                  Located in { place.city }, { places.state }
+                  Located in { place.city }, { place.state }
                 </p>
             </div>
         ))}
