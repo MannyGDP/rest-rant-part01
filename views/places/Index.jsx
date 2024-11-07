@@ -8,7 +8,7 @@ function Index({ places }) {
         <h1>PLACES</h1>
         <div className='row'>
         { places.map((place, index) => (
-          <div className='col-sm-6'>
+          <div className='col-sm-6' key={index}>
                 <h2>
                   <a href={ `/places/${index}`}>
                     { place.name }

@@ -21,6 +21,17 @@ placesRouter.get('/:id', (req, res) => {
   }
 });
 
+placesRouter.get('/:id/edit', (req, res) => {
+  let id = Number(req.params.id);
+  if (isNaN(id)) {
+    res.render('Error404');
+  } else if (!places[id]) {
+    res.render('Error404');
+  } else {
+    res.render('places/Edit', { place: places[id], id });
+  }
+});
+
 placesRouter.delete('/:id', (req, res) => {
   let id = Number(req.params.id);
   if (isNaN(id)) {
