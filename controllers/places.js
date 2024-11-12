@@ -17,7 +17,7 @@ placesRouter.get('/:id', (req, res) => {
     res.render('Error404');
   }
   else {
-    res.render('Show', { place: places[id], id });
+    res.render('places/Show', { place: places[id], id });
   }
 });
 
