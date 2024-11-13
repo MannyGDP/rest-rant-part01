@@ -45,7 +45,6 @@ function Edit({ place, id }) {
                                 id='state'
                                 name='state'
                                 value={place.state}
-                                required
                             />
                         </div>
                     </div>
